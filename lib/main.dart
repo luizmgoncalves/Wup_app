@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 void main() {
   runApp(MaterialApp(
@@ -196,24 +197,29 @@ class _Tela2State extends State<Tela2> {
         Container(
           color: Color.fromARGB(255, 179, 179, 179),
           alignment: Alignment.topCenter,
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black, style: BorderStyle.solid),
-              borderRadius: BorderRadius.all(Radius.circular(30))
-              
-            ),
-            child: FittedBox(
-            alignment: Alignment.topCenter,
-            fit: BoxFit.fitHeight,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const Icon(Icons.person, size: 100),
-                const Text("Carlos Eduardo Capanema Mazon Jardins", style: TextStyle(fontSize: 20)),
-                Container(width: 30,)
-              ]),
-            )
-            ,)
+          child: Column(
+            children: [
+              Container(height: 30,),
+              Container(
+                decoration: BoxDecoration(
+                border: Border.all(color: Colors.black, style: BorderStyle.solid),
+                borderRadius: BorderRadius.all(Radius.circular(30))
+                
+              ),
+              child: FittedBox(
+              alignment: Alignment.topCenter,
+              fit: BoxFit.fitHeight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const Icon(Icons.person, size: 100),
+                  const Text("Carlos Eduardo Capanema Mazon Jardins", style: TextStyle(fontSize: 20)),
+                  Container(width: 30,)
+                ]),
+              )
+              ,)
+            ],
+          )
         ),
         Container(
           color: Color.fromARGB(255, 144, 144, 144),
